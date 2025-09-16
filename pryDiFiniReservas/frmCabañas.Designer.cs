@@ -35,12 +35,18 @@
             lbltelefonos = new Label();
             txtNombre = new TextBox();
             lblNombre = new Label();
+            pnl3 = new Panel();
+            cmbTarjetas = new ComboBox();
+            lblTarjetas = new Label();
+            optTarjeta = new RadioButton();
+            optEfectivo = new RadioButton();
             lblPago = new Label();
             lblAdicionales = new Label();
             panel3 = new Panel();
             pnl2 = new Panel();
             checkBox1 = new CheckBox();
             kkkkk = new CheckBox();
+            checkBox3 = new CheckBox();
             chkTelevisor = new CheckBox();
             chkHeladera = new CheckBox();
             chkCocina = new CheckBox();
@@ -53,36 +59,30 @@
             lblPersonas = new Label();
             cmbTipo = new ComboBox();
             lblTipo = new Label();
-            optEfectivo = new RadioButton();
-            optTarjeta = new RadioButton();
-            lblTarjetas = new Label();
-            cmbTarjetas = new ComboBox();
-            pnl3 = new Panel();
-            checkBox3 = new CheckBox();
             pnl4.SuspendLayout();
+            pnl3.SuspendLayout();
             panel3.SuspendLayout();
             pnl2.SuspendLayout();
             pnlUno.SuspendLayout();
-            pnl3.SuspendLayout();
             SuspendLayout();
             // 
             // btnAceptar
             // 
             btnAceptar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAceptar.Location = new Point(436, 462);
+            btnAceptar.Location = new Point(449, 469);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(149, 37);
-            btnAceptar.TabIndex = 22;
+            btnAceptar.TabIndex = 32;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
             // 
             // lblReserva
             // 
             lblReserva.AutoSize = true;
-            lblReserva.Location = new Point(12, 288);
+            lblReserva.Location = new Point(25, 295);
             lblReserva.Name = "lblReserva";
             lblReserva.Size = new Size(108, 15);
-            lblReserva.TabIndex = 21;
+            lblReserva.TabIndex = 31;
             lblReserva.Text = "Titular de la reserva";
             // 
             // pnl4
@@ -92,10 +92,10 @@
             pnl4.Controls.Add(lbltelefonos);
             pnl4.Controls.Add(txtNombre);
             pnl4.Controls.Add(lblNombre);
-            pnl4.Location = new Point(12, 306);
+            pnl4.Location = new Point(25, 313);
             pnl4.Name = "pnl4";
             pnl4.Size = new Size(573, 121);
-            pnl4.TabIndex = 20;
+            pnl4.TabIndex = 30;
             // 
             // txtTelefono
             // 
@@ -129,22 +129,74 @@
             lblNombre.TabIndex = 4;
             lblNombre.Text = "Nombre";
             // 
+            // pnl3
+            // 
+            pnl3.BorderStyle = BorderStyle.Fixed3D;
+            pnl3.Controls.Add(cmbTarjetas);
+            pnl3.Controls.Add(lblTarjetas);
+            pnl3.Controls.Add(optTarjeta);
+            pnl3.Controls.Add(optEfectivo);
+            pnl3.Location = new Point(172, 165);
+            pnl3.Name = "pnl3";
+            pnl3.Size = new Size(426, 111);
+            pnl3.TabIndex = 29;
+            // 
+            // cmbTarjetas
+            // 
+            cmbTarjetas.FormattingEnabled = true;
+            cmbTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green ", "Card Blue." });
+            cmbTarjetas.Location = new Point(96, 67);
+            cmbTarjetas.Name = "cmbTarjetas";
+            cmbTarjetas.Size = new Size(202, 23);
+            cmbTarjetas.TabIndex = 5;
+            // 
+            // lblTarjetas
+            // 
+            lblTarjetas.AutoSize = true;
+            lblTarjetas.Location = new Point(96, 43);
+            lblTarjetas.Name = "lblTarjetas";
+            lblTarjetas.Size = new Size(46, 15);
+            lblTarjetas.TabIndex = 4;
+            lblTarjetas.Text = "Tarjetas";
+            // 
+            // optTarjeta
+            // 
+            optTarjeta.AutoSize = true;
+            optTarjeta.Location = new Point(16, 42);
+            optTarjeta.Name = "optTarjeta";
+            optTarjeta.Size = new Size(59, 19);
+            optTarjeta.TabIndex = 1;
+            optTarjeta.TabStop = true;
+            optTarjeta.Text = "Tarjeta";
+            optTarjeta.UseVisualStyleBackColor = true;
+            // 
+            // optEfectivo
+            // 
+            optEfectivo.AutoSize = true;
+            optEfectivo.Location = new Point(16, 16);
+            optEfectivo.Name = "optEfectivo";
+            optEfectivo.Size = new Size(67, 19);
+            optEfectivo.TabIndex = 0;
+            optEfectivo.TabStop = true;
+            optEfectivo.Text = "Efectivo";
+            optEfectivo.UseVisualStyleBackColor = true;
+            // 
             // lblPago
             // 
             lblPago.AutoSize = true;
-            lblPago.Location = new Point(159, 140);
+            lblPago.Location = new Point(172, 147);
             lblPago.Name = "lblPago";
             lblPago.Size = new Size(92, 15);
-            lblPago.TabIndex = 18;
+            lblPago.TabIndex = 28;
             lblPago.Text = "Formas de pago";
             // 
             // lblAdicionales
             // 
             lblAdicionales.AutoSize = true;
-            lblAdicionales.Location = new Point(12, 140);
+            lblAdicionales.Location = new Point(25, 147);
             lblAdicionales.Name = "lblAdicionales";
             lblAdicionales.Size = new Size(68, 15);
-            lblAdicionales.TabIndex = 13;
+            lblAdicionales.TabIndex = 23;
             lblAdicionales.Text = "Adicionales";
             // 
             // panel3
@@ -154,10 +206,10 @@
             panel3.Controls.Add(chkTelevisor);
             panel3.Controls.Add(chkHeladera);
             panel3.Controls.Add(chkCocina);
-            panel3.Location = new Point(12, 158);
+            panel3.Location = new Point(25, 165);
             panel3.Name = "panel3";
             panel3.Size = new Size(122, 111);
-            panel3.TabIndex = 17;
+            panel3.TabIndex = 27;
             // 
             // pnl2
             // 
@@ -176,7 +228,7 @@
             checkBox1.Location = new Point(12, 67);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(71, 19);
-            checkBox1.TabIndex = 2;
+            checkBox1.TabIndex = 3;
             checkBox1.Text = "Televisor";
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -189,6 +241,16 @@
             kkkkk.TabIndex = 1;
             kkkkk.Text = "Heladera";
             kkkkk.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(12, 17);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(63, 19);
+            checkBox3.TabIndex = 0;
+            checkBox3.Text = "Cocina";
+            checkBox3.UseVisualStyleBackColor = true;
             // 
             // chkTelevisor
             // 
@@ -224,19 +286,19 @@
             // 
             lblCabaña.AutoSize = true;
             lblCabaña.BackColor = SystemColors.Control;
-            lblCabaña.Location = new Point(12, 23);
+            lblCabaña.Location = new Point(25, 30);
             lblCabaña.Name = "lblCabaña";
             lblCabaña.Size = new Size(87, 15);
-            lblCabaña.TabIndex = 14;
+            lblCabaña.TabIndex = 24;
             lblCabaña.Text = "Tipo de cabaña";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 32);
+            label1.Location = new Point(37, 39);
             label1.Name = "label1";
             label1.Size = new Size(0, 15);
-            label1.TabIndex = 15;
+            label1.TabIndex = 25;
             // 
             // pnlUno
             // 
@@ -247,10 +309,10 @@
             pnlUno.Controls.Add(lblPersonas);
             pnlUno.Controls.Add(cmbTipo);
             pnlUno.Controls.Add(lblTipo);
-            pnlUno.Location = new Point(12, 41);
+            pnlUno.Location = new Point(25, 48);
             pnlUno.Name = "pnlUno";
             pnlUno.Size = new Size(573, 81);
-            pnlUno.TabIndex = 16;
+            pnlUno.TabIndex = 26;
             // 
             // txtDias
             // 
@@ -288,6 +350,7 @@
             // cmbTipo
             // 
             cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { "TIPOA", "TIPOB" });
             cmbTipo.Location = new Point(46, 25);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(121, 23);
@@ -301,68 +364,6 @@
             lblTipo.Size = new Size(30, 15);
             lblTipo.TabIndex = 0;
             lblTipo.Text = "Tipo";
-            // 
-            // optEfectivo
-            // 
-            optEfectivo.AutoSize = true;
-            optEfectivo.Location = new Point(16, 16);
-            optEfectivo.Name = "optEfectivo";
-            optEfectivo.Size = new Size(67, 19);
-            optEfectivo.TabIndex = 0;
-            optEfectivo.TabStop = true;
-            optEfectivo.Text = "Efectivo";
-            optEfectivo.UseVisualStyleBackColor = true;
-            // 
-            // optTarjeta
-            // 
-            optTarjeta.AutoSize = true;
-            optTarjeta.Location = new Point(16, 42);
-            optTarjeta.Name = "optTarjeta";
-            optTarjeta.Size = new Size(59, 19);
-            optTarjeta.TabIndex = 1;
-            optTarjeta.TabStop = true;
-            optTarjeta.Text = "Tarjeta";
-            optTarjeta.UseVisualStyleBackColor = true;
-            // 
-            // lblTarjetas
-            // 
-            lblTarjetas.AutoSize = true;
-            lblTarjetas.Location = new Point(96, 43);
-            lblTarjetas.Name = "lblTarjetas";
-            lblTarjetas.Size = new Size(46, 15);
-            lblTarjetas.TabIndex = 4;
-            lblTarjetas.Text = "Tarjetas";
-            // 
-            // cmbTarjetas
-            // 
-            cmbTarjetas.FormattingEnabled = true;
-            cmbTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green ", "Card Blue." });
-            cmbTarjetas.Location = new Point(96, 67);
-            cmbTarjetas.Name = "cmbTarjetas";
-            cmbTarjetas.Size = new Size(202, 23);
-            cmbTarjetas.TabIndex = 5;
-            // 
-            // pnl3
-            // 
-            pnl3.BorderStyle = BorderStyle.Fixed3D;
-            pnl3.Controls.Add(cmbTarjetas);
-            pnl3.Controls.Add(lblTarjetas);
-            pnl3.Controls.Add(optTarjeta);
-            pnl3.Controls.Add(optEfectivo);
-            pnl3.Location = new Point(159, 158);
-            pnl3.Name = "pnl3";
-            pnl3.Size = new Size(426, 111);
-            pnl3.TabIndex = 19;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(12, 17);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(63, 19);
-            checkBox3.TabIndex = 0;
-            checkBox3.Text = "Cocina";
-            checkBox3.UseVisualStyleBackColor = true;
             // 
             // frmCabañas
             // 
@@ -381,16 +382,17 @@
             Controls.Add(pnlUno);
             Name = "frmCabañas";
             Text = "Reservas de cabañas";
+            Load += frmCabañas_Load;
             pnl4.ResumeLayout(false);
             pnl4.PerformLayout();
+            pnl3.ResumeLayout(false);
+            pnl3.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             pnl2.ResumeLayout(false);
             pnl2.PerformLayout();
             pnlUno.ResumeLayout(false);
             pnlUno.PerformLayout();
-            pnl3.ResumeLayout(false);
-            pnl3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,12 +406,18 @@
         private Label lbltelefonos;
         private TextBox txtNombre;
         private Label lblNombre;
+        private Panel pnl3;
+        private ComboBox cmbTarjetas;
+        private Label lblTarjetas;
+        private RadioButton optTarjeta;
+        private RadioButton optEfectivo;
         private Label lblPago;
         private Label lblAdicionales;
         private Panel panel3;
         private Panel pnl2;
         private CheckBox checkBox1;
         private CheckBox kkkkk;
+        private CheckBox checkBox3;
         private CheckBox chkTelevisor;
         private CheckBox chkHeladera;
         private CheckBox chkCocina;
@@ -422,11 +430,5 @@
         private Label lblPersonas;
         private ComboBox cmbTipo;
         private Label lblTipo;
-        private RadioButton optEfectivo;
-        private RadioButton optTarjeta;
-        private Label lblTarjetas;
-        private ComboBox cmbTarjetas;
-        private Panel pnl3;
-        private CheckBox checkBox3;
     }
 }
