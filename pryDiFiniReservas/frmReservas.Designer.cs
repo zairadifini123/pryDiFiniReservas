@@ -62,7 +62,7 @@
             checkBox2 = new CheckBox();
             checkBox3 = new CheckBox();
             panel5 = new Panel();
-            radioButton1 = new RadioButton();
+            optEfectivo = new RadioButton();
             pnlUno.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -387,22 +387,22 @@
             // panel5
             // 
             panel5.BorderStyle = BorderStyle.Fixed3D;
-            panel5.Controls.Add(radioButton1);
+            panel5.Controls.Add(optEfectivo);
             panel5.Location = new Point(159, 146);
             panel5.Name = "panel5";
             panel5.Size = new Size(426, 111);
             panel5.TabIndex = 9;
             // 
-            // radioButton1
+            // optEfectivo
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(16, 16);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(67, 19);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "efectivo";
-            radioButton1.UseVisualStyleBackColor = true;
+            optEfectivo.AutoSize = true;
+            optEfectivo.Location = new Point(16, 16);
+            optEfectivo.Name = "optEfectivo";
+            optEfectivo.Size = new Size(67, 19);
+            optEfectivo.TabIndex = 0;
+            optEfectivo.TabStop = true;
+            optEfectivo.Text = "Efectivo";
+            optEfectivo.UseVisualStyleBackColor = true;
             // 
             // frmReservas
             // 
@@ -470,6 +470,6 @@
         private CheckBox chkTelevisor;
         private Label lblPago;
         private Panel panel5;
-        private RadioButton radioButton1;
+        private RadioButton optEfectivo;
     }
 }
