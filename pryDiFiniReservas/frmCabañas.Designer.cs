@@ -75,6 +75,7 @@
             btnAceptar.TabIndex = 32;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // lblReserva
             // 
@@ -103,6 +104,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(442, 23);
             txtTelefono.TabIndex = 8;
+            txtTelefono.TextChanged += txtTelefono_TextChanged;
             // 
             // lbltelefonos
             // 
@@ -119,6 +121,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(442, 23);
             txtNombre.TabIndex = 6;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // lblNombre
             // 
@@ -144,7 +147,6 @@
             // cmbTarjetas
             // 
             cmbTarjetas.FormattingEnabled = true;
-            cmbTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green ", "Card Blue." });
             cmbTarjetas.Location = new Point(96, 67);
             cmbTarjetas.Name = "cmbTarjetas";
             cmbTarjetas.Size = new Size(202, 23);
@@ -169,6 +171,7 @@
             optTarjeta.TabStop = true;
             optTarjeta.Text = "Tarjeta";
             optTarjeta.UseVisualStyleBackColor = true;
+            optTarjeta.CheckedChanged += optTarjeta_CheckedChanged;
             // 
             // optEfectivo
             // 
@@ -180,6 +183,7 @@
             optEfectivo.TabStop = true;
             optEfectivo.Text = "Efectivo";
             optEfectivo.UseVisualStyleBackColor = true;
+            optEfectivo.CheckedChanged += optEfectivo_CheckedChanged;
             // 
             // lblPago
             // 
@@ -320,6 +324,7 @@
             txtDias.Name = "txtDias";
             txtDias.Size = new Size(121, 23);
             txtDias.TabIndex = 5;
+            txtDias.TextChanged += txtDias_TextChanged;
             // 
             // lblDias
             // 
@@ -350,11 +355,11 @@
             // cmbTipo
             // 
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Items.AddRange(new object[] { "TIPOA", "TIPOB" });
             cmbTipo.Location = new Point(46, 25);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(121, 23);
             cmbTipo.TabIndex = 1;
+            cmbTipo.SelectedIndexChanged += cmbTipo_SelectedIndexChanged;
             // 
             // lblTipo
             // 
