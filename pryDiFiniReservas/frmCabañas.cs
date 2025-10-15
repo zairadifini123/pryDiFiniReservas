@@ -20,6 +20,16 @@ namespace pryDiFiniReservas
         const float Heladera = 1.5f;
         const float Televisor = 2;
         const float Personas = 1;
+
+        public struct Reserva
+        {
+            string tipo;
+            int cantidad;
+            int dias;
+        }
+        Reserva[] vecReserva = new Reserva[10];
+        string[,] matReserva = new string[3,3];
+        int IndiceFila = 0;
         public frmCabañas()
         {
             InitializeComponent();
@@ -136,6 +146,12 @@ namespace pryDiFiniReservas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            matReserva[IndiceFila, 0] = cmbTipo.Text;
+            matReserva[IndiceFila, 1] = cmbPersonas.Text;
+            matReserva[IndiceFila, 2] = txtDias.Text;
+            IndiceFila++;
+
+
             float PrecioBase;
             float Opcionales;
             float Recargo;
@@ -189,16 +205,21 @@ namespace pryDiFiniReservas
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             // inicialzar los controles de la interfaz
 
+            LimpiarUI();
+        }
+
+        void LimpiarUI()
+        {
             cmbTipo.SelectedIndex = 0;
             txtDias.Text = "1";
             chkCocina.Checked = false;
             chkHeladera.Checked = false;
             chkTelevisor.Checked = false;
-            // en los radiobuttons se asigna sólo el que debe quedar en true
             optEfectivo.Checked = true;
             txtNombre.Text = "";
             txtTelefono.Text = "";
         }
+
     }
     }
 

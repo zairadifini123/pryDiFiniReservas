@@ -59,6 +59,7 @@
             lblPersonas = new Label();
             cmbTipo = new ComboBox();
             lblTipo = new Label();
+            btnCancelar = new Button();
             pnl4.SuspendLayout();
             pnl3.SuspendLayout();
             panel3.SuspendLayout();
@@ -337,6 +338,7 @@
             // 
             // cmbPersonas
             // 
+            cmbPersonas.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPersonas.FormattingEnabled = true;
             cmbPersonas.Location = new Point(243, 25);
             cmbPersonas.Name = "cmbPersonas";
@@ -354,6 +356,7 @@
             // 
             // cmbTipo
             // 
+            cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
             cmbTipo.Location = new Point(46, 25);
             cmbTipo.Name = "cmbTipo";
@@ -370,11 +373,22 @@
             lblTipo.TabIndex = 0;
             lblTipo.Text = "Tipo";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(294, 469);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(149, 37);
+            btnCancelar.TabIndex = 33;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // frmCabañas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(644, 549);
+            Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(lblReserva);
             Controls.Add(pnl4);
@@ -385,7 +399,9 @@
             Controls.Add(lblCabaña);
             Controls.Add(label1);
             Controls.Add(pnlUno);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "frmCabañas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reservas de cabañas";
             Load += frmCabañas_Load;
             pnl4.ResumeLayout(false);
@@ -435,5 +451,6 @@
         private Label lblPersonas;
         private ComboBox cmbTipo;
         private Label lblTipo;
+        private Button btnCancelar;
     }
 }
