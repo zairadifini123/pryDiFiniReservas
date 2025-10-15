@@ -60,11 +60,16 @@
             cmbTipo = new ComboBox();
             lblTipo = new Label();
             btnCancelar = new Button();
+            dgvDatos = new DataGridView();
+            colTipo = new DataGridViewTextBoxColumn();
+            colPersonas = new DataGridViewTextBoxColumn();
+            colDias = new DataGridViewTextBoxColumn();
             pnl4.SuspendLayout();
             pnl3.SuspendLayout();
             panel3.SuspendLayout();
             pnl2.SuspendLayout();
             pnlUno.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             SuspendLayout();
             // 
             // btnAceptar
@@ -382,12 +387,41 @@
             btnCancelar.TabIndex = 33;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // dgvDatos
+            // 
+            dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colTipo, colPersonas, colDias });
+            dgvDatos.Location = new Point(614, 48);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.Size = new Size(418, 386);
+            dgvDatos.TabIndex = 34;
+            // 
+            // colTipo
+            // 
+            colTipo.HeaderText = "Tipo";
+            colTipo.Name = "colTipo";
+            colTipo.Width = 125;
+            // 
+            // colPersonas
+            // 
+            colPersonas.HeaderText = "Personas";
+            colPersonas.Name = "colPersonas";
+            colPersonas.Width = 125;
+            // 
+            // colDias
+            // 
+            colDias.HeaderText = "Días";
+            colDias.Name = "colDias";
+            colDias.Width = 125;
             // 
             // frmCabañas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(644, 549);
+            ClientSize = new Size(1044, 549);
+            Controls.Add(dgvDatos);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(lblReserva);
@@ -414,6 +448,7 @@
             pnl2.PerformLayout();
             pnlUno.ResumeLayout(false);
             pnlUno.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -452,5 +487,9 @@
         private ComboBox cmbTipo;
         private Label lblTipo;
         private Button btnCancelar;
+        private DataGridView dgvDatos;
+        private DataGridViewTextBoxColumn colTipo;
+        private DataGridViewTextBoxColumn colPersonas;
+        private DataGridViewTextBoxColumn colDias;
     }
 }
