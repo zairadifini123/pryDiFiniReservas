@@ -28,7 +28,7 @@ namespace pryDiFiniReservas
             int dias;
         }
         Reserva[] vecReserva = new Reserva[10];
-        string[,] matReserva = new string[108, 3];
+        string[,] matReserva = new string[200, 3];
         int IndiceFila = 0;
         public frmCabañas()
         {
@@ -38,11 +38,11 @@ namespace pryDiFiniReservas
         private void frmCabañas_Load(object sender, EventArgs e)
         {
             CargarDatos();
-            for (int IndiceRecorridoFila = 0; IndiceRecorridoFila < matReserva.GetLength(0); IndiceRecorridoFila++)
+            for (int IndiceRecorridoFila = 0; IndiceRecorridoFila < IndiceFila; IndiceRecorridoFila++)
             {
                 dgvDatos.Rows.Add(matReserva[IndiceRecorridoFila, 0],
-                    matReserva[IndiceRecorridoFila, 1],
-                    matReserva[IndiceRecorridoFila, 2]);
+                                  matReserva[IndiceRecorridoFila, 1],
+                                  matReserva[IndiceRecorridoFila, 2]);
             }
 
             // cargar los items en el primer control combobox
@@ -180,6 +180,15 @@ namespace pryDiFiniReservas
             matReserva[105, 0] = "Tipo B"; matReserva[105, 1] = "93"; matReserva[105, 2] = "17";
             matReserva[106, 0] = "Tipo A"; matReserva[106, 1] = "6"; matReserva[106, 2] = "10";
             matReserva[107, 0] = "Tipo B"; matReserva[107, 1] = "12"; matReserva[107, 2] = "26";
+
+            for (int i = 0; i < matReserva.GetLength(0); i++)
+            {
+                if (string.IsNullOrEmpty(matReserva[i, 0]))
+                {
+                    IndiceFila = i;
+                    break;
+                }
+            }
         }
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -265,10 +274,21 @@ namespace pryDiFiniReservas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            matReserva[IndiceFila, 0] = cmbTipo.Text;
-            matReserva[IndiceFila, 1] = cmbPersonas.Text;
-            matReserva[IndiceFila, 2] = txtDias.Text;
-            IndiceFila++;
+            if (IndiceFila < matReserva.GetLength(0)) // verificar espacio en la matriz
+            {
+                // Guardar datos en la matriz
+                matReserva[IndiceFila, 0] = cmbTipo.SelectedItem.ToString(); 
+                matReserva[IndiceFila, 1] = cmbPersonas.SelectedItem.ToString();               
+                matReserva[IndiceFila, 2] = txtDias.Text;                  
+
+           
+                dgvDatos.Rows.Add(matReserva[IndiceFila, 0], matReserva[IndiceFila, 1], matReserva[IndiceFila, 2]);
+
+                IndiceFila++; 
+
+                txtDias.Text = "1";
+
+            }
 
 
             float PrecioBase;
@@ -341,7 +361,25 @@ namespace pryDiFiniReservas
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            LimpiarUI(); 
+            LimpiarUI();
+        }
+
+        private void txtDias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+               e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

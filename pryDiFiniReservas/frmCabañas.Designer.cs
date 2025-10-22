@@ -111,6 +111,7 @@
             txtTelefono.Size = new Size(442, 23);
             txtTelefono.TabIndex = 8;
             txtTelefono.TextChanged += txtTelefono_TextChanged;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
             // 
             // lbltelefonos
             // 
@@ -331,6 +332,7 @@
             txtDias.Size = new Size(121, 23);
             txtDias.TabIndex = 5;
             txtDias.TextChanged += txtDias_TextChanged;
+            txtDias.KeyPress += txtDias_KeyPress;
             // 
             // lblDias
             // 
