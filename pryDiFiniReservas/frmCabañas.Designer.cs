@@ -43,10 +43,6 @@
             lblPago = new Label();
             lblAdicionales = new Label();
             panel3 = new Panel();
-            pnl2 = new Panel();
-            checkBox1 = new CheckBox();
-            kkkkk = new CheckBox();
-            checkBox3 = new CheckBox();
             chkTelevisor = new CheckBox();
             chkHeladera = new CheckBox();
             chkCocina = new CheckBox();
@@ -67,7 +63,6 @@
             pnl4.SuspendLayout();
             pnl3.SuspendLayout();
             panel3.SuspendLayout();
-            pnl2.SuspendLayout();
             pnlUno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             SuspendLayout();
@@ -213,7 +208,6 @@
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(pnl2);
             panel3.Controls.Add(chkTelevisor);
             panel3.Controls.Add(chkHeladera);
             panel3.Controls.Add(chkCocina);
@@ -221,47 +215,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(122, 111);
             panel3.TabIndex = 27;
-            // 
-            // pnl2
-            // 
-            pnl2.BorderStyle = BorderStyle.Fixed3D;
-            pnl2.Controls.Add(checkBox1);
-            pnl2.Controls.Add(kkkkk);
-            pnl2.Controls.Add(checkBox3);
-            pnl2.Location = new Point(-2, -2);
-            pnl2.Name = "pnl2";
-            pnl2.Size = new Size(122, 111);
-            pnl2.TabIndex = 8;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(12, 67);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(71, 19);
-            checkBox1.TabIndex = 3;
-            checkBox1.Text = "Televisor";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // kkkkk
-            // 
-            kkkkk.AutoSize = true;
-            kkkkk.Location = new Point(12, 42);
-            kkkkk.Name = "kkkkk";
-            kkkkk.Size = new Size(73, 19);
-            kkkkk.TabIndex = 1;
-            kkkkk.Text = "Heladera";
-            kkkkk.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(12, 17);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(63, 19);
-            checkBox3.TabIndex = 0;
-            checkBox3.Text = "Cocina";
-            checkBox3.UseVisualStyleBackColor = true;
             // 
             // chkTelevisor
             // 
@@ -446,8 +399,6 @@
             pnl3.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            pnl2.ResumeLayout(false);
-            pnl2.PerformLayout();
             pnlUno.ResumeLayout(false);
             pnlUno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
@@ -472,10 +423,6 @@
         private Label lblPago;
         private Label lblAdicionales;
         private Panel panel3;
-        private Panel pnl2;
-        private CheckBox checkBox1;
-        private CheckBox kkkkk;
-        private CheckBox checkBox3;
         private CheckBox chkTelevisor;
         private CheckBox chkHeladera;
         private CheckBox chkCocina;
